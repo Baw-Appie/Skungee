@@ -94,3 +94,5 @@ jar {
 		}
 	}
 }
+
+compileJava.options.encoding = 'UTF-8'
