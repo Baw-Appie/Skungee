@@ -13,7 +13,7 @@ import me.limeglass.skungee.spigot.utils.annotations.Patterns;
 
 @Name("Bungeecord player colours")
 @Description("Check if a player has chat colors enabled or disabled.")
-@Patterns("[bungee[[ ]cord]] [(player|uuid)] %string/player% (1¦(has|do[es])|2¦(has|do[es])(n't| not)) (have|got) chat colo[u]r[s] [(enabled|on)]")
+@Patterns("[bungee[[ ]cord]] [(player|uuid)] %string/player% (1?has|do[es])|2?has|do[es])(n't| not)) (have|got) chat colo[u]r[s] [(enabled|on)]")
 public class CondPlayerHasColours extends SkungeeCondition {
 
 	public boolean check(Event event) {

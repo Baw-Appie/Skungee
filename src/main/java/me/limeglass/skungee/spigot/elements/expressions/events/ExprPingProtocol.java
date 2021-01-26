@@ -22,7 +22,7 @@ import me.limeglass.skungee.spigot.utils.annotations.Settable;
 
 @Name("Bungeecord Ping event protocol")
 @Description({"Returns the protocol invloved in the Bungeecord ping event. A number may only be called on the protocol section of the syntax.", "You may find protocol IDs here http://wiki.vg/index.php?title=Protocol_History&printable=yes"})
-@Patterns({"(ping|server list|event) bungee[[ ]cord] (version|protocol) [(1¦name|2¦(protocol|number))]", "bungee[[ ]cord] (ping|server list|event) (version|protocol) [(1¦name|2¦(protocol|number))]"})
+@Patterns({"(ping|server list|event) bungee[[ ]cord] (version|protocol) [(1¦name|2?protocol|number))]", "bungee[[ ]cord] (ping|server list|event) (version|protocol) [(1¦name|2?protocol|number))]"})
 @ExpressionProperty(ExpressionType.SIMPLE)
 @Changers(ChangeMode.SET)
 @Settable({String.class, Number.class})

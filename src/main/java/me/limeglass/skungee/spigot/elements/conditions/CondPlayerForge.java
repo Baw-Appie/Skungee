@@ -13,7 +13,7 @@ import me.limeglass.skungee.spigot.utils.annotations.Patterns;
 
 @Name("Bungeecord player forge")
 @Description("Check if a player from the Bungeecord is using the Forge client.")
-@Patterns("[bungee[[ ]cord]] [(player|uuid)] %string/player% (1¦(has|is (running|using))|2¦(is(n't (running|using)| not))) [the] forge [client]")
+@Patterns("[bungee[[ ]cord]] [(player|uuid)] %string/player% (1?has|is (running|using))|2?is(n't (running|using)| not))) [the] forge [client]")
 public class CondPlayerForge extends SkungeeCondition {
 
 	public boolean check(Event event) {

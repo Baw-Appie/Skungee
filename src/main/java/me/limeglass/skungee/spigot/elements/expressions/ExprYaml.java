@@ -20,7 +20,7 @@ import me.limeglass.skungee.spigot.utils.annotations.Patterns;
 
 @Name("Skungee YAML")
 @Description("The main syntax for managing yaml on the Bungeecord. DO NOT USE THIS AS A STORAGE SYSTEM, Use Network Variables if you're trying to make Network storage or MySQL.")
-@Patterns("(skungee|bungee[[ ]cord]) [y[a]ml] (1¦value|2¦(node|path)[[s with] keys]|3¦list) %string% (of|in|from) [file] %string%")
+@Patterns("(skungee|bungee[[ ]cord]) [y[a]ml] (1¦value|2?node|path)[[s with] keys]|3¦list) %string% (of|in|from) [file] %string%")
 public class ExprYaml extends SkungeeExpression<Object> {
 
 	private State state;
