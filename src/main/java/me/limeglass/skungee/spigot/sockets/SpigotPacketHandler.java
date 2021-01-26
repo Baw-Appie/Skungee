@@ -131,7 +131,7 @@ public class SpigotPacketHandler {
 							if (scripts.parallelStream().anyMatch(file -> file.getName().equals(entry.getKey()))) {
 								Boolean reload = false;
 								File script = File.createTempFile("Skungee", entry.getKey());
-								PrintStream out = new PrintStream(new FileOutputStream(script));
+								PrintStream out = new PrintStream(new FileOutputStream(script), true, "UTF-8");
 								out.print(StringUtils.join(entry.getValue(), '\n'));
 								out.close();
 								for (File similar : scripts.parallelStream().filter(file -> file.getName().equals(entry.getKey())).collect(Collectors.toSet())) {
@@ -159,7 +159,7 @@ public class SpigotPacketHandler {
 								script.delete();
 							} else {
 								File script = new File(scriptsFolder + File.separator + entry.getKey());
-								PrintStream out = new PrintStream(new FileOutputStream(script));
+								PrintStream out = new PrintStream(new FileOutputStream(script), true, "UTF-8");
 								out.print(StringUtils.join(entry.getValue(), '\n'));
 								out.close();
 								String name = scriptsFolder + File.separator + script.getName();
